@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AdBlock Detector + Countdown Button</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Example of a Button with AdBlock Detection</h1>
+      <p>
+        Press the button to go to another link (if AdBlock is not installed).
+      </p>
+
+      <button id="goBtn" data-href="https://example.com" disabled>
+        Go to Example.com
+      </button>
+
+      <!-- Overlay pop-up -->
+      <div
+        id="overlay"
+        class="overlay hidden"
+        role="dialog"
+        aria-labelledby="overlayTitle"
+        aria-modal="true"
+      >
+        <div class="overlay-card">
+          <h2 id="overlayTitle">AdBlock Detected</h2>
+          <p>Please disable AdBlock to continue..</p>
+          <div class="overlay-actions">
+            <button id="closeOverlay" type="button">Close</button>
+          </div>
+        </div>
+      </div>
+
+      <noscript>
+        <div class="noscript-warning">
+          <h2>JavaScript Dinonaktifkan</h2>
+          <p>Untuk melanjutkan, silakan aktifkan JavaScript di browser Anda.</p>
+        </div>
+      </noscript>
+    </main>
+
+    <script src="detectAdBlock.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
