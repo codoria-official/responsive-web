@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News & Popup Newsletter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Daily News Portal</h1>
+      <p>Daily updates on the latest information</p>
+    </header>
+
+    <div class="container">
+      <h2 align="center">Latest News</h2>
+      <div class="news-grid">
+        <div class="news-card">
+          <div
+            class="news-image"
+            style="background-image: url('https://via.placeholder.com/400x300')"
+          ></div>
+          <div class="news-content">
+            <h3>🌦️ Extreme Weather</h3>
+            <p>
+              Early warning regarding the potential for heavy rain and strong
+              winds in several areas.
+            </p>
+          </div>
+        </div>
+        <div class="news-card">
+          <div
+            class="news-image"
+            style="background-image: url('https://via.placeholder.com/400x300')"
+          ></div>
+          <div class="news-content">
+            <h3>✈️ Air Traffic Increases by 15%</h3>
+            <p>
+              Passenger numbers increase ahead of long holiday at several major
+              airports.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="popup-overlay" id="popup-overlay"></div>
+
+    <!-- Popup Box -->
+    <div class="popup-box" id="popup-box">
+      <button class="close-btn" id="close-btn">&times;</button>
+      <h2>Subscribe to our newsletter</h2>
+      <p>Get the latest news delivered directly to your email every morning.</p>
+      <input type="email" placeholder="Enter your email address" />
+      <button class="subscribe">Subscribe</button>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
