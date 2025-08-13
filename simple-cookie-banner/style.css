@@ -1,0 +1,66 @@
+/* Styling Cookie Banner */
+.cookie-banner {
+  position: fixed;
+  bottom: -100px; /* Initially hidden */
+  left: 0;
+  right: 0;
+  background-color: #2d2d2d;
+  color: white;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  font-family: Arial, sans-serif;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+/* When displayed */
+.cookie-banner.show {
+  bottom: 0;
+  opacity: 1;
+}
+
+/* Teks */
+.cookie-banner .cookie-text {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.cookie-banner a {
+  color: #4ea3ff;
+  text-decoration: underline;
+}
+
+/* Button */
+.cookie-banner button {
+  background-color: #4ea3ff;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  color: white;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.cookie-banner button:hover {
+  background-color: #3584d4;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .cookie-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cookie-banner button {
+    width: 100%;
+    text-align: center;
+  }
+}
