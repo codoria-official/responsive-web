@@ -1,0 +1,49 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  padding: 20px;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-weight: 700;
+  display: inline-block;
+  border-right: 3px solid #fff;
+  padding-right: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blinkCursor 0.7s infinite;
+}
+
+@keyframes blinkCursor {
+  0%,
+  50% {
+    border-color: #fff;
+  }
+  51%,
+  100% {
+    border-color: transparent;
+  }
+}
+
+/* Additional animation for each letter */
+.letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px) scale(0.9);
+  animation: letterAppear 0.4s forwards;
+}
+
+@keyframes letterAppear {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
