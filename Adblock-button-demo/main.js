@@ -22,11 +22,11 @@ goBtn.addEventListener("click", (e) => {
   let seconds = 5;
   goBtn.disabled = true;
 
-  goBtn.textContent = `Menuju dalam ${seconds}...`;
+  goBtn.textContent = `Towards in ${seconds}...`;
 
   const countdown = setInterval(() => {
     seconds--;
-    goBtn.textContent = `Menuju dalam ${seconds}...`;
+    goBtn.textContent = `Towards in ${seconds}...`;
     if (seconds <= 0) {
       clearInterval(countdown);
       window.location.href = goBtn.dataset.href;
